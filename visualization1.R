@@ -2,12 +2,16 @@
 library(plotly)
 
 visualization1 <- function(data){
-  p <- plot_ly(data,
-    x = Amount&Of&People,
-    y = c(20, 14, 23),
-    name = "Level of Coding",
-    type = "bar",
-    filename="r-docs/simple-bar"
-  )
+
+# Create graph
+p = plot_ly(data, 
+         x = AmountOfPeople,
+        y = c("No experience", "Coded alittle", "Not and Coding"),
+        name = "Level of Coding",
+        type = "bar",
+        filename="r-docs/simple-bar
+) %>%
+  layout(title = 'Crowdsourced Police Shootings', geo = g)
+ return (p)
   
 }
