@@ -2,16 +2,11 @@
 library(plotly)
 
 visualization1 <- function(data){
-
-# Create graph
-p = plot_ly(data, 
-         x = AmountOfPeople,
-        y = c("No experience", "Coded alittle", "Not and Coding"),
-        name = "Level of Coding",
-        type = "bar",
-        filename="r-docs/simple-bar
-) %>%
-  layout(title = 'Crowdsourced Police Shootings', geo = g)
- return (p)
-  
+  p <- plot_ly(data,
+        x = `What is your programming experience?` ,
+        y = `Amount of Students`, 
+        type = "bar", 
+        marker = list(color = toRGB("blue3"))) %>% 
+      layout(title = 'Coding before INFO498',) 
+  return(p)
 }
