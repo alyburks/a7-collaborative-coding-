@@ -93,7 +93,7 @@ summary_info <- function(dataInfo) {
   ret$no_experience <- r_language(dataInfo, "Never used it") #70
   
   ret$intermediate_experience <- r_language(dataInfo, "Intermediate user") #4 people
-  
+  data_info <- table(data$Are.you.interested.in.applying.to.the.Informatics.major.)
     #Return the list
     return(ret)
 } #closes summary info function (mega function)
