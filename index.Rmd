@@ -1,0 +1,41 @@
+---
+title: "index"
+date: "February 21, 2016"
+output: html_document
+---
+
+### Assignment 7 Collaborative Coding 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(plotly)
+library(knitr)
+setwd("C:/Users/Evan/info498f/a7-collaborative-coding-")
+source("scripts/summaryInfo.R")
+source("visualization1.R")
+
+data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+
+info <- summary_info(data)
+```
+
+***
+
+#### **Summary Information**
+Based on the survey taken at the beginning of this quarter, there are **`r info$total_fresh`** freshman, **`r info$total_soph`** sophomores, **`r info$total_jun`** juniors, and **`r info$total_senior`** seniors in the class that completed the survey.
+
+When examining the Operating Systems that the class uses, we found the number of students that use Mac or Windows Operating Systems. Out of the sample **`r info$mac_users`** students use a Mac operating system, while **`r info$windows_users`** students use a Windows OS.
+
+Of the people that responded to the survey, **`r info$yes_apply`** said that they were going to apply to the Informatics major, while **`r info$maybe_apply`** responded "maybe" and only **`r info$no_apply`** saying that they would not apply to the Informatics major.
+
+As for sports fans that responded to the survey, **`r info$seahawks_fan`** responded that they were Seahawks fans while **`r info$not_seahawks_fan`** said that they were not Seahawks fans. This turns out to be **`r info$prohawks_class_prop`** percent of the people that responded to the survey as Seahawks fans while **`r info$nohawks_class_prop`** percent are not Seahawks fans.
+
+Lastly, students were asked at the beginning of the quarter how familiar they were with the programming language R. **`r info$intermediate_experience`** people reported that they were "Intermediate Users", **`r info$some_experience`** people said that they had used it a few times before taking the class, and **`r info$no_experience`** people had no previous experience in R before taking this class.
+
+***
+
+#### **Data Visualization #1**
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+data_info <- table(data$Are.you.interested.in.applying.to.the.Informatics.major.)
+
+visualization1(data)
+```
