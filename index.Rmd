@@ -9,7 +9,7 @@ output: html_document
 library(dplyr)
 library(plotly)
 library(knitr)
-setwd("C:/Users/Evan/info498f/a7-collaborative-coding-")
+#setwd("C:/Users/Evan/info498f/a7-collaborative-coding-")
 source("scripts/summaryInfo.R")
 source("visualization1.R")
 
@@ -34,8 +34,8 @@ Lastly, students were asked at the beginning of the quarter how familiar they we
 ***
 
 #### **Data Visualization #1**
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r data_info, echo = FALSE, message = FALSE,results = 'hide'}
 data_info <- table(data$Are.you.interested.in.applying.to.the.Informatics.major.)
+visualization1(data_info)
 
-visualization1(data)
 ```
