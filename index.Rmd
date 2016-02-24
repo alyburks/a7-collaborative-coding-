@@ -7,7 +7,7 @@ library(plotly)
 library(knitr)
 #setwd("C:/Users/Evan/info498f/a7-collaborative-coding-")
 source("scripts/summaryInfo.R")
-source("visualization1.R")
+source("scripts/visualization1.R")
 source("scripts/chart2.R")
 
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
