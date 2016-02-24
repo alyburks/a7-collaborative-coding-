@@ -1,10 +1,6 @@
----
-title: "index"
-date: "February 21, 2016"
-output: html_document
----
+# Assignment 7 Collaborative Coding 
 
-### Assignment 7 Collaborative Coding 
+### February 24, 2016
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(plotly)
@@ -12,6 +8,7 @@ library(knitr)
 #setwd("C:/Users/Evan/info498f/a7-collaborative-coding-")
 source("scripts/summaryInfo.R")
 source("visualization1.R")
+source("scripts/chart2.R")
 
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 
@@ -38,4 +35,9 @@ Lastly, students were asked at the beginning of the quarter how familiar they we
 data_info <- table(data$Are.you.interested.in.applying.to.the.Informatics.major.)
 visualization1(data_info)
 
+```
+
+#### **Data Visualization #2**
+```{r echo = FALSE, message = FALSE}
+vis2(data)
 ```
